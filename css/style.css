@@ -184,7 +184,7 @@
     content: '';
     left: 0;
     top: 0;
-    
+    transform: translateY(-40%);
     background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
 }
 
@@ -195,12 +195,39 @@
     margin-right: auto;
 }
 
+.articles-container {
+    counter-reset: num;
+    margin-top: -350px;
+}
+
 .articles__cards {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: -460px;
     color: #fff;
+    margin-bottom: 200px;
+}
+
+.articles__cards:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.articles__cards::before {
+    position: absolute;
+    counter-increment: num;
+    content: "0" counter(num);
+    left: 0;
+    top: 38px;
+    font-family: "Gilory Bold";
+    font-size: 240px;
+    line-height: 240px;
+    color: #FFFFFF;
+    opacity: 0.1;
+}
+
+.flex-item {
+    margin-left: 150px;
 }
 
 .articles__card-overtitle {

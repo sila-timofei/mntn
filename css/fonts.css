@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Chronicle Display Bold"; 
+    src: url("../fonts/Chronicle-Display-Bold.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "Chronicle Display Semibold"; 
+    src: url("../fonts/Chronicle-Display-Semibold.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "Gilory Bold"; 
+    src: url("../fonts/Gilroy-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "Gilory Extrabold"; 
+    src: url("../fonts/Gilroy-Extrabold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 

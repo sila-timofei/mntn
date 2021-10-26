@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="fsvs" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+            var slider = $.fn.fsvs({
+                autoPlay            : false,
+                speed               : 1000,
+                bodyID              : 'fsvs-body',
+                selector            : '> .slide',
+                mouseSwipeDisance   : 40,
+                afterSlide          : function(){},
+                beforeSlide         : function(){},
+                endSlide            : function(){},
+                mouseWheelEvents    : true,
+                mouseWheelDelay     : false,
+                mouseDragEvents     : true,
+                touchEvents         : true,
+                arrowKeyEvents      : true,
+                pagination          : true,
+                nthClasses          : 2,
+                detectHash          : true
+            });
+        });
+    </script>
 </head>
 <body class="documnt">
     <header class="header">
@@ -51,8 +76,8 @@
         </div>
     </div>
 
-    <main class="main-wrapper articles-container">
-        <section class="screen">
+    <main id="fsvs-body" class="main-wrapper articles-container">
+        <section class="screen slide">
             <div class="screen-wrapp screen1-wrapp">
                 <div class="screen1__title">
                     <div>
@@ -72,7 +97,7 @@
             </div>
         </section>
 
-        <section class="screen">
+        <section class="screen slide">
             <div class="screen-wrapp screen-wrapp2">
                 <div class="card container">
                     <div class="flex-item card__flex-item">
@@ -92,7 +117,7 @@
             </div>
         </section>
 
-        <section class="screen">
+        <section class="screen slide">
             <div class="screen-wrapp">
                 <div class="card card_reverse container">
                     <div class="card__flex-item">
@@ -113,7 +138,7 @@
             </div>
         </section>
 
-        <section class="screen">
+        <section class="screen slide">
             <div class="screen-wrapp">
                 <div class="card container">
                     <div class="flex-item card__flex-item">
@@ -132,7 +157,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer container">

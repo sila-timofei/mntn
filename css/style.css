@@ -3,7 +3,6 @@
 }
 
 .documnt {
-    background-image: url('../img/main-bg.png');
     background-position: top center;
     background-repeat: no-repeat;
     background-color: #0B1D26;
@@ -29,6 +28,7 @@
     font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.01em;
+    color: #fff;
 }
 
 .header__nav-link {
@@ -312,4 +312,77 @@
     background-image: url('../img/arrow-right.svg');
     background-position: right center;
     background-repeat: no-repeat;
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    max-width: 1462px;
+    padding-bottom: 120px;
+    padding-right: 20px;
+    padding-left:  20px;
+}
+
+.footer__block-copyter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.footer__logo {
+    margin-bottom: 24px;
+}
+
+.footer__text-under-logo {
+    font-family: "Gilory Bold"; 
+    white-space: pre-line;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.footer__copyter {
+    font-family: "Gilory Medium"; 
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.footer__block-lists {
+    display: flex;
+}
+
+.footer__list {
+    margin-right: 200px;
+}
+
+.footer__list:last-child {
+    margin-right: 0;
+}
+
+.footer__list-title {
+    font-family: "Gilory Bold"; 
+    font-size: 24px;
+    line-height: 32px;
+    color: #FBD784;
+    margin-bottom: 24px;
+}
+
+.footer__list > li {
+    margin-bottom: 16px;
+}
+
+.footer__list > li:last-child {
+    margin-bottom: 0;
+}
+
+.footer__list > li a {
+    font-family: "Gilory Medium"; 
+    font-size: 18px;
+    line-height: 32px;
+    color: #fff;
+    text-decoration: none;
 }

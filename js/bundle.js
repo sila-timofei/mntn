@@ -498,6 +498,14 @@
 		 * @type {Object}
 		 */
 
+        
+        // plaxin START
+        $("[data-scroll]").click(function(e){
+            e.preventDefault();
+            app.slideToIndex( $(this).index(), e );
+        });
+        // plaxin END
+        
 		var app = {
 
 			nthClasses : nthClasses,
@@ -528,12 +536,14 @@
 					marginTop : '-' + (paginationHeight/2) + 'px',
 					right : '25px'
 				});
+                
 				$('li', pagination).bind( 'click.fsvs', function(e){
 					ignoreHashChange = true;
 					$('.active', pagination).removeClass( 'active' );
 					$(this).addClass( 'active' );
 					app.slideToIndex( $(this).index(), e );
 				});
+                
 			},
 
 			/**
@@ -614,7 +624,22 @@
 				if( ! e && pagination ) {
 					$('.active', pagination).removeClass( 'active' );
 					$('> *', pagination).eq(index).addClass( 'active' );
-				}
+				} else {
+                    
+                    // plaxin START
+                    var indicator = $("#scroll-indicator");
+                    var currentPage = $('[data-scroll]').eq(index);
+                    
+                    currentPage.addClass( 'active' ).siblings().removeClass('active');
+                    
+                    var iTop = currentPage.position().top;
+                    var iHeight = currentPage.outerHeight();
+
+                    indicator.css({top: iTop, height: iHeight});
+                    
+                    // plaxin END
+                    
+                }
 				app.addClasses( currentSlideIndex, index );
 				if( hasTransition() ) {
 					cssSlide( index );

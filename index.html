@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="fsvs" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,31 +13,33 @@
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/bundle.js"></script>
     <script>
-        jQuery(document).ready(function($){
+        jQuery(document).ready(function($) {
             var slider = $.fn.fsvs({
-                autoPlay            : false,
-                speed               : 1000,
-                bodyID              : 'fsvs-body',
-                selector            : '> .slide',
-                mouseSwipeDisance   : 40,
-                afterSlide          : function(){},
-                beforeSlide         : function(){},
-                endSlide            : function(){},
-                mouseWheelEvents    : true,
-                mouseWheelDelay     : false,
-                mouseDragEvents     : true,
-                touchEvents         : true,
-                arrowKeyEvents      : true,
-                pagination          : true,
-                nthClasses          : 2,
-                detectHash          : true
+                autoPlay: false,
+                speed: 1000,
+                bodyID: 'fsvs-body',
+                selector: '> .slide',
+                mouseSwipeDisance: 40,
+                afterSlide: function() {},
+                beforeSlide: function() {},
+                endSlide: function() {},
+                mouseWheelEvents: true,
+                mouseWheelDelay: false,
+                mouseDragEvents: false,
+                touchEvents: false,
+                arrowKeyEvents: true,
+                pagination: false,
+                nthClasses: 2,
+                detectHash: true
             });
         });
+
     </script>
 </head>
+
 <body class="documnt">
     <header class="header">
-        <div class="header__logo">
+        <div class="logo">
             mntn
         </div>
 
@@ -64,31 +67,26 @@
     </div>
 
     <div class="header__control-slider">
-        <div>
-            <div class="header__slider-num">Start</div>
-            <div class="header__slider-num">01</div>
-            <div class="header__slider-num">02</div>
-            <div class="header__slider-num">03</div>
-        </div>
-
-        <div class="header__slider-time-line">
-            <div class="header__slider-active"></div>
-        </div>
+        <a href="#slide-start" class="header__slider-num" data-scroll="true">Start</a>
+        <a href="#slide-1" class="header__slider-num" data-scroll="true">01</a>
+        <a href="#slide-2" class="header__slider-num" data-scroll="true">02</a>
+        <a href="#slide-3" class="header__slider-num" data-scroll="true">03</a>
+        <span class="scroll-indicator" id="scroll-indicator"></span>
     </div>
 
     <main id="fsvs-body" class="main-wrapper articles-container">
-        <section class="screen slide">
+        <section class="screen slide" id="slide-start">
             <div class="screen-wrapp screen1-wrapp">
                 <div class="screen1__title">
                     <div>
                         <div class="screen1__over-title">
                             A Hiking guide
                         </div>
-        
+
                         <h1 class="screen1__main-title">Be Prepared For The
                             Mountains And Beyond!
                         </h1>
-        
+
                         <div class="screen1__scroll">
                             scroll down
                         </div>
@@ -97,72 +95,68 @@
             </div>
         </section>
 
-        <section class="screen slide">
+        <section class="screen slide" id="slide-1">
             <div class="screen-wrapp screen-wrapp2">
                 <div class="card container">
                     <div class="flex-item card__flex-item">
                         <div class="card__overtitle">get started</div>
-                        <h2 class="card__title">What level of  hiker
+                        <h2 class="card__title">What level of hiker
                             are you?</h2>
-        
+
                         <p class="card__text">
-                            Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker? 
+                            Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?
                         </p>
-        
+
                         <a href="#" class="card__link">read more</a>
                     </div>
-        
+
                     <img src="img/01.jpg" alt="">
                 </div>
             </div>
         </section>
 
-        <section class="screen slide">
+        <section class="screen slide" id="slide-2">
             <div class="screen-wrapp">
                 <div class="card card_reverse container">
                     <div class="card__flex-item">
                         <div class="card__overtitle">hiking essentials</div>
                         <h2 class="card__title">Picking the right
                             Hiking Gear!</h2>
-        
+
                         <p class="card__text">
                             The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have.
-                            Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet. 
+                            Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.
                         </p>
-        
+
                         <a href="#" class="card__link">read more</a>
                     </div>
-        
+
                     <img src="img/02.jpg" alt="">
                 </div>
             </div>
         </section>
 
-        <section class="screen slide">
+        <section class="screen slide" id="slide-3">
             <div class="screen-wrapp">
                 <div class="card container">
                     <div class="flex-item card__flex-item">
                         <div class="card__overtitle">where you go is the key</div>
                         <h2 class="card__title">Understand Your
                             Map & Timing</h2>
-        
+
                         <p class="card__text">
                             To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction..
                         </p>
-        
+
                         <a href="#" class="card__link">read more</a>
                     </div>
-        
+
                     <img src="img/03.jpg" alt="">
                 </div>
             </div>
         </section>
-    </main>
+    </main> 
 
-    <footer class="footer container">
-        <div class="flex-item">
-
-        </div>
-    </footer>
 </body>
+
 </html>

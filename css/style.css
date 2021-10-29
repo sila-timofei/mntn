@@ -7,6 +7,7 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-color: #0B1D26;
+    overflow: hidden;
 }
 
 
@@ -22,7 +23,7 @@
     z-index: 1000;
 }
 
-.header__logo {
+.logo {
     font-family: "Chronicle Display Bold";
     text-transform: uppercase;
     font-size: 32px;
@@ -90,7 +91,9 @@
     right: 80px;
     z-index: 1000;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    flex-direction: column;
+    border-right: 3px solid rgba(255, 255, 255, .5);
 }
 
 .header__slider-num {
@@ -99,30 +102,18 @@
     line-height: 22px;
     text-align: right;
     color: #FFFFFF;
-    margin-bottom: 40px;
+    padding: 20px 36px 20px 0;
+    text-decoration: none;
 }
 
-.header__slider-num:last-child {
-    margin-bottom: 0;
-}
-
-.header__slider-time-line {
-    position: relative;
+.scroll-indicator {
+    background: #fff;
+    height: 0;
     width: 3px;
-    height: 240px;
-    background-color: #FFFFFF;
-    opacity: 0.5;
-    margin-left: 32px;
-}
-
-.header__slider-active {
     position: absolute;
-    left: 0;
+    left: 100%;
     top: 0;
-    height: 25%;
-    width: 100%;
-    background: #e61414;
-    z-index: 3333;
+    transition: all 1s;
 }
 
 
@@ -139,6 +130,8 @@
 .screen {
     width: 100vw;
     min-height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
 }
 
 .screen-wrapp {
@@ -152,6 +145,11 @@
 
 .articles-container {
     counter-reset: num;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .screen1-wrapp {
@@ -160,6 +158,7 @@
     background-image: url('../img/main-bg.png');
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .screen1__over-title {
@@ -186,7 +185,7 @@
 }
 
 .screen1__main-title {
-    font-family: "Chronicle Display Semibold"; 
+    font-family: "Chronicle Display Semibold";
     white-space: pre-line;
     font-size: 88px;
     line-height: 100px;
@@ -243,7 +242,7 @@
 .card__flex-item::before {
     position: absolute;
     counter-increment: num;
-    content: "0" counter(num);
+    content: "0"counter(num);
     left: -150px;
     top: -100px;
     transform: translateY() translateX();
@@ -264,7 +263,7 @@
 
 .card__overtitle {
     position: relative;
-    font-family: "Gilory Extrabold"; 
+    font-family: "Gilory Extrabold";
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 6px;
@@ -304,7 +303,7 @@
 
 .card__link {
     position: relative;
-    font-family: "Gilory Bold"; 
+    font-family: "Gilory Bold";
     text-decoration: none;
     font-size: 18px;
     line-height: 22px;
